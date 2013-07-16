@@ -37,3 +37,17 @@ To run imget, run the imget script and use the -i parameter to supply the yaml f
 
 In this example, the inputlist did not include the .yml extension, but it will look for inputlist.yml 
 in the current working directory.
+
+## Setting up Symlinks
+
+To setup a symlink so you can just run `imget -i somefile` in the commandline. Run the setup-symlink.sh script as root.
+
+	sudo bash setup-symlink.sh
+
+This will create a symlink from the directory that contains the imget.rb file to /usr/local/bin/.
+
+To remove the symlink, run as admin the destroy-symlink.sh file.
+
+	sudo bash destroy-symlink.sh
+
+This will delete the symlink.

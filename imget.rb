@@ -10,7 +10,7 @@ opts = Trollop::options do
 end
 
 unless opts[:input_given]
-  print "Please supply an input list"
+  print "Please supply an input list\n"
   exit(1)
 end
 pwd = Dir::pwd + "/"
