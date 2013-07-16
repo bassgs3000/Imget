@@ -2,9 +2,6 @@ Imget
 -----
 Imget is a simple solution to downloading and organizing pictures at the same time.
 
-## Table of contents
-[toc]
-
 ## Requirements
 - Ruby >= 1.9.3 
 - Trollop >= 2.0
