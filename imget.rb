@@ -38,13 +38,15 @@ inputlist.each do |k,v|
     FileUtils::mkdir_p(tgt)
   end
 
-  unless v.nil?
+  if v.nil?
+    print "#{k}, is empty, skipping\n"
+  else
     v.each do |link|
       urlchunks = link.split("/")
       filename = urlchunks.last
       unless File.exists?(tgt+filename)
         begin
-          print "Retrieving #{filename}\n"
+          print "Retrieving #{tgt}#{filename}\n"
           filename.match(/[a-zA-Z1-9]+\.(?:jpe?g|gif|png)/i)[0]
           filesrc = open(link).read
           file = open(tgt+filename,"wb")
